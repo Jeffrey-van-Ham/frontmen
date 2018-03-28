@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+body, html {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 0 10px 0;
+}
+
+.header::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.header a {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: #007ac3;
+    font-size: 1.7em;
+    padding: 10px;
+    margin: 0;
+}
+
+.header a.active {
+    border-bottom: 2px solid #007ac3;
+}
+
+.joke {
+    position: relative;
+    padding: 10px 0 10px 40px;
+    border-bottom: solid 1px #eee;
+}
+
+.joke .star {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    cursor: pointer;
+    color: #ffb700;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 14px;
+    color: #fff;
+    border: none;
+    background: #007ac3;
+    font-size: 1em;
+    margin: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[disabled] {
+    opacity: .7;
+}
+
+.login-modal {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 2px 4px 1px #0000001f;
+    opacity: 1;
+}
+
+.login-modal .title {
+    color: #007ac3;
+    font-size: 1.7em;
+}
+
+.login-modal input {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+.login-modal button {
+    margin: 10px 0 0 0;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.backdrop, .login-modal {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+}
+
+.backdrop.hidden, .login-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
